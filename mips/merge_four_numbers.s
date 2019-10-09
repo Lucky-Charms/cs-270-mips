@@ -23,3 +23,5 @@ or $a0, $a0, $t3
 
 li $v0, 1
 syscall
+
+jr $ra
