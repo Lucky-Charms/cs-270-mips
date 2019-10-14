@@ -1,12 +1,12 @@
 	.data
 prompt: .asciiz "Enter a number: "
-boundary: .word 10
+#boundary: .word 10
 matchMessage: .asciiz "Ten!"
 
 	.text
 	.globl main
 main: 
-	lw $t0, boundary
+	#lw $t0, boundary
 	
 	li $v0, 4
 	la $a0, prompt
@@ -16,7 +16,7 @@ main:
 	syscall
 	move $t1, $v0
 	
-	beq $t1, $t0, LequalTen
+	beq $t1, 10, LequalTen
 	b Lend
 	
 LequalTen:
