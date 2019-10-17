@@ -1,17 +1,14 @@
 	.data
-prompt: .asciiz "Enter a number: "
+prompt: .asciiz "Enter number: "
 positive: .asciiz "positive"
 negative: .asciiz "negative"
 zero: .asciiz "zero"
-positiveThreshold: .word 1
-negativeThreshold: .word -1
 
 	.text
 	.globl main
 
 main:
-	lw $t0, positiveThreshold
-	lw $t1, negativeThreshold
+
 
 	li $v0, 4
 	la $a0, prompt
@@ -24,9 +21,9 @@ main:
 	
 	beqz $t2 LequalToZero
 	
-	bge $t2, $t0, Lpositive
+	bge $t2, 1, Lpositive
 	
-	ble $t2, $t1, Lnegative
+	ble $t2, -1, Lnegative
 	
 	b Lend
 

@@ -1,12 +1,10 @@
 	.data
-prompt: .asciiz "Enter a number: "
-#boundary: .word 10
+prompt: .asciiz "Enter number: "
 matchMessage: .asciiz "Ten!"
 
 	.text
 	.globl main
 main: 
-	#lw $t0, boundary
 	
 	li $v0, 4
 	la $a0, prompt

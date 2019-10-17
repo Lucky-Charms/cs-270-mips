@@ -1,5 +1,5 @@
 	.data
-prompt: .asciiz "Enter a number: "
+prompt: .asciiz "Enter number: "
 i: .word 0
 
 	.text
