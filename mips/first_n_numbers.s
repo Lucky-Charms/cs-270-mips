@@ -18,7 +18,7 @@ main:
 	
 LbeginLoop:
 	
-	bge $t1, $t0, LendLoop
+	bgt $t1, $t0, LendLoop
 	
 	
 	li $v0, 1
