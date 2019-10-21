@@ -1,6 +1,6 @@
 	.data
 prompt: .asciiz "Enter number: "
-i: .word 0
+i: .word 1
 
 	.text
 	.globl main
