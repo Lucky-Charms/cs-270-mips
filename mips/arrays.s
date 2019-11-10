@@ -27,13 +27,14 @@ main:
 	# Your code here...
 	#############################
 	
-	li $t0, 0 	#result
+	li $t7, 0 	#result
+	li $t0, 0 #incrementer
 	lw $t1, num
 	la $t2, arr
 	lw $t4, Nelems 
+LwhileOne:
 	add $t5, $t2, $t0 #arr[i]
 	lw $t6, ($t5)
-LwhileOne:
 	bne $t6,  $t1 LsecondCond
 	b LwhileEnd
 
@@ -42,14 +43,12 @@ LsecondCond:
 	b LwhileEnd
 	
 LwhileBody:
-	addi $t0, $t0, 1 #increment result
-	add $t5, $t2, $t0 #arr[i]
-	lw $t6, ($t5)
+	addi $t0, $t0, 4 #increment result
+	addi $t7, $t7, 1
 	b LwhileOne
 	
 LwhileEnd:
 	#Do Nothing.
-	move $t0,$t7
 	
 	
 	
